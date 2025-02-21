@@ -7,6 +7,8 @@ const SignIn = () => {
 
   return (
     <>
+    <Link href={"/home"}>
+    <div className='bg-slate-500 text-white text-2xl rounded-lg inline-block m-5 p-3'>Click here for Home Page</div></Link>
     <div className='flex justify-center mt-8'>
         <div style={{minWidth: "30%"}}>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white shadow-lg">
