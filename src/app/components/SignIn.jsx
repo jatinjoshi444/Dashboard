@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const page = () => {
+const SignIn = () => {
 
 
   return (
@@ -20,7 +20,7 @@ const page = () => {
     </div>
 
     <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-      <form action="#" method="POST" className="space-y-6">
+      <form action="/home" method="POST" className="space-y-6">
         <div>
           <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
             Email address
@@ -65,7 +65,8 @@ const page = () => {
             type="submit"
             className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Sign in
+          Sign in
+            
           </button>
         </div>
       </form>
@@ -85,4 +86,4 @@ const page = () => {
   )
 }
 
-export default page
+export default SignIn

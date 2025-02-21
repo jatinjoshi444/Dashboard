@@ -1,11 +1,10 @@
 import React from 'react'
-import Signin from './home/components/Signin'
-import SideNavbar from './home/components/SideNavbar'
+import SignIn from './components/SignIn'
 
 const page = () => {
   return (
     <>
-      <SideNavbar/>
+      <SignIn/>
     </>
   )
 }
