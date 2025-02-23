@@ -1,9 +1,36 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 
-const page = () => {
+const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      alert("Signup Successful");
+      router.push("/");
+    } else {
+      alert(data.message);
+    }
+  };
+
   return (
+
     <>
     <div className='flex justify-center mt-8'>
         <div style={{minWidth: "30%"}}>
@@ -18,7 +45,7 @@ const page = () => {
     </div>
 
     <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-      <form action="#" method="POST" className="space-y-6">
+      <form className="space-y-6" onSubmit={handleSignUp}>
         <div>
           <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
             Email address
@@ -26,6 +53,7 @@ const page = () => {
           <div className="mt-2">
             <input
               id="email"
+              onChange={(e) => setEmail(e.target.value)}
               name="email"
               type="email"
               required
@@ -44,6 +72,7 @@ const page = () => {
           <div className="mt-2">
             <input
               id="password"
+              onChange={(e) => setPassword(e.target.value)}
               name="password"
               type="password"
               required
@@ -62,6 +91,7 @@ const page = () => {
           <div className="mt-2">
             <input
               id="Cpassword"
+              onChange={(e) => setPassword(e.target.value)}
               name="password"
               type="password"
               required
@@ -93,7 +123,7 @@ const page = () => {
     </div>
     
 </>
-  )
-}
+  );
+};
 
-export default page
+export default SignUp;
