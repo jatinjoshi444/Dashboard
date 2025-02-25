@@ -7,6 +7,10 @@ import Image from "next/image";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
+
+
   const router = useRouter();
 
   const handleSignUp = async (e) => {
@@ -92,7 +96,7 @@ const SignUp = () => {
             <input
               id="Cpassword"
               onChange={(e) => setPassword(e.target.value)}
-              name="password"
+              name="Cpassword"
               type="password"
               required
               autoComplete="current-password"

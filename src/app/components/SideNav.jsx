@@ -1,14 +1,10 @@
 "use client";
 import { MdDashboard, MdSettings, MdPeople, MdBarChart } from "react-icons/md";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaPlus } from "react-icons/fa";
 import Link from 'next/link';
 
-
-
 const SideNavbar = () => {
-
-
-    const menuList = [
+     const menuList = [
         {
             id:1,
             name:"Dashboard",
@@ -32,6 +28,12 @@ const SideNavbar = () => {
             name:"Setting",
             icon:MdSettings,
             path:"/home/setting"
+        },
+        {
+            id:5,
+            name:"Crud",
+            icon:FaPlus,
+            path:"/home/crud"
         },
     ]
 
