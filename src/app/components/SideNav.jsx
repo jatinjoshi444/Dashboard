@@ -1,6 +1,6 @@
 "use client";
 import { MdDashboard, MdSettings, MdPeople, MdBarChart } from "react-icons/md";
-import { FaUserCircle, FaPlus } from "react-icons/fa";
+import { FaUserCircle, FaShoppingCart } from "react-icons/fa";
 import Link from 'next/link';
 
 const SideNavbar = () => {
@@ -24,17 +24,17 @@ const SideNavbar = () => {
             path:"/home/team"
         },
         {
-            id:4,
-            name:"Setting",
-            icon:MdSettings,
-            path:"/home/setting"
+            id:3,
+            name:"Product Details",
+            icon:FaShoppingCart,
+            path:"/home/product"
         },
         {
             id:5,
-            name:"Crud",
-            icon:FaPlus,
-            path:"/home/crud"
-        },
+            name:"Setting",
+            icon:MdSettings,
+            path:"/home/setting"
+        }
     ]
 
   return (
@@ -57,8 +57,8 @@ const SideNavbar = () => {
                 <div className='flex items-center gap-2 bottom-10 fixed p-4'>
                     <FaUserCircle/>
                     <div>
-                        <h3>jatin</h3>
-                        <h3>jatin@gmail.com</h3>
+                        <h3>Sahu</h3>
+                        <h3>Sahu@gmail.com</h3>
                     </div>
                 </div>
 

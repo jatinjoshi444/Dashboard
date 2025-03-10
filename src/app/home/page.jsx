@@ -2,9 +2,9 @@ import React from "react";
 
 const page = () => {
   const user = {
-    name: "Jatin joshi",
+    name: "Sahu",
     role: "Software Engineer",
-    email: "jatin@gmail.com",
+    email: "Sahu@gmail.com",
     location: "Delhi,India",
     active: true,
   };
